@@ -1,72 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Calculator</title>
+    <title>Responsive Landing Page</title>
     <style>
-        #calculator {
-            width: 180px;
-            margin: 0 auto;
+        * {
+            box-sizing: border-box;
         }
-        input[type="button"] {
-            width: 40px;
-            height: 40px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
         }
-        #result {
-            height: 40px;
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color:black;
+            color: white;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+        @media screen and (max-width: 600px) {
+            .content {
+                margin: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="calculator">
-        <input type="text" id="result" disabled/>
-        <br/>
-        <input type="button" value="1" onclick="addToResult('1')"/>
-        <input type="button" value="2" onclick="addToResult('2')"/>
-        <input type="button" value="3" onclick="addToResult('3')"/>
-        <input type="button" value="+" onclick="addToResult('+')"/>
-        <br/>
-        <input type="button" value="4" onclick="addToResult('4')"/>
-        <input type="button" value="5" onclick="addToResult('5')"/>
-        <input type="button" value="6" onclick="addToResult('6')"/>
-        <input type="button" value="-" onclick="addToResult('-')"/>
-        <br/>
-        <input type="button" value="7" onclick="addToResult('7')"/>
-        <input type="button" value="8" onclick="addToResult('8')"/>
-        <input type="button" value="9" onclick="addToResult('9')"/>
-        <input type="button" value="*" onclick="addToResult('*')"/>
-        <br/>
-        <input type="button" value="/" onclick="addToResult('/')"/>
-        <input type="button" value="0" onclick="addToResult('0')"/>
-        <input type="button" value=". " onclick="addToResult('.')"/>
-        <input type="button" value="% " onclick="addToResult('%')"/>
-        <br/>
-        <input type="button" value="<-- " onclick='removeLast()'/>
-        <input type='button' value='C' onclick='clearAll()'/>
-        <input type='button' value='=' onclick='calculate()'/>
+    <div class="header">
+        <h1>Prakhar pratap singh</h1>
     </div>
-
-    <script>
-    var resultField = document.getElementById('result');
-
-    function addToResult(value) {
-      resultField.value += value;
-    }
-
-    function calculate() {
-      try {
-          resultField.value = eval(resultField.value);
-      } catch {
-          resultField.value = 'Error';
-      }
-    }
-
-    function clearAll() {
-      resultField.value = '';
-    }
-
-    function removeLast() {
-      resultField.value = resultField.value.slice(0, -1);
-    }
-    </script>
+    <div class="content">
+        <h2>About me</h2>
+        <p>I am a student of B tech and currently persuing computer science course.I am a frontend developer.</p>
+        <h2>Skills</h2>
+        <p>core: HTML and CSS</p>
+        <p>Other: Designing automobile design.</p>
+        <h2>Lets connect</h2>
+        <p>prakharpratap08@gmail.com </p>
+        <p>connect me here </p>
+    </div>
 </body>
 </html>
